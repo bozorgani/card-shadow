@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0e1538;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    transform: skewX(2deg) skewY(4deg);
+    background: linear-gradient(315deg,#00ccff,#0e1538,#d400d4);
+}
+
+.card::after{
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    transform: skewX(2deg) skewY(4deg);
+    background: linear-gradient(315deg,#00ccff,#0e1538,#d400d4);
+    filter: blur(50px);
+}
+
+.card span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0e1538;
+    z-index: 10;
+}
+
+.card h2{
+    color: #fff;
+    position: relative;
+    z-index: 11;
+    font-size: 3em;
+}
+
